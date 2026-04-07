@@ -3,7 +3,7 @@ import * as PIXI from 'pixi.js';
 import { io } from 'socket.io-client';
 import { MessageSquare, Users, Send, X } from 'lucide-react';
 
-const SOCKET_URL = 'http://localhost:5000';
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000';
 const PROXIMITY_RADIUS = 100;
 
 function App() {

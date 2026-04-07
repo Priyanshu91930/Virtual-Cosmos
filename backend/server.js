@@ -21,9 +21,6 @@ const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/virtual-co
 mongoose.connect(MONGO_URI)
   .then(async () => {
     console.log('Connected to MongoDB');
-    // Clear old users on startup for a clean slate
-    await User.deleteMany({});
-    console.log('Cleared old user sessions');
   })
   .catch(err => console.error('MongoDB connection error:', err));
 
